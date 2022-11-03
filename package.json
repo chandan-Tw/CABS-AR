@@ -1,0 +1,23 @@
+{
+  "name": "cabs-ar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chandan-Tw/CABS-AR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chandan-Tw/CABS-AR/issues"
+  },
+  "homepage": "https://github.com/chandan-Tw/CABS-AR#readme",
+  "dependencies": {
+    "aframe": "^1.3.0",
+    "mind-ar": "^1.1.5"
+  }
+}

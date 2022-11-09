@@ -1,4 +1,6 @@
 fileignoreconfig:
 - filename: package-lock.json
-  checksum: aa0f6600098d46f419813314655abcb111b30a83482bac0282c707e2851ccf10
+  checksum: fef89474d6ec2e07fabb504eadcde2eb5dc072024b9fd12386eee10d2f655bcf
+- filename: public/mindar-face-three.prod.js
+  checksum: a81dbc6147e959448773fced9613ae41605e229c265a34e45d586dd1c012ebf8
 version: ""

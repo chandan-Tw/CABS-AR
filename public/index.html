@@ -16,17 +16,53 @@
         overflow: hidden;
       }
       #control {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .options-panel {
         position: fixed;
-        top: 0;
         left: 0;
+        top: 0;
         z-index: 2;
+      }
+      .options-panel img {
+        border: solid 2px;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .options-panel img.selected {
+        border-color: green;
       }
     </style>
   </head>
   <body>
     <div id="control">
-      <button id="startButton">Start</button>
-      <button id="stopButton">Stop</button>
+      <div class="options-panel">
+        <img
+          id="hat1"
+          src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/face-tracking/assets/hat/thumbnail.png"
+        />
+        <img
+          id="hat2"
+          src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/face-tracking/assets/hat2/thumbnail.png"
+        />
+        <img
+          id="glasses1"
+          src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/face-tracking/assets/glasses/thumbnail.png"
+        />
+        <img
+          id="glasses2"
+          src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/face-tracking/assets/glasses2/thumbnail.png"
+        />
+        <img
+          id="earring"
+          src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/face-tracking/assets/earring/thumbnail.png"
+        />
+      </div>
     </div>
     <div id="container"></div>
     <script type="module" src="client.js"></script>

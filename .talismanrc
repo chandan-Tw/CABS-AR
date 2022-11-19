@@ -1,3 +1,5 @@
 fileignoreconfig:
 - filename: assets/clownHat/scene.gltf
   checksum: 6ba8206dc2be87d314bca1fd74cda1865cd7b306bea29d36bb95657bed6fef6f
+- filename: assets/redCap/scene.gltf
+  checksum: de31083617dc77b13f4bec327303e517d22a6d74a092365d1b4d5ac22454fbb7

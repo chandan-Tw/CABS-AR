@@ -3,3 +3,5 @@ fileignoreconfig:
   checksum: 6ba8206dc2be87d314bca1fd74cda1865cd7b306bea29d36bb95657bed6fef6f
 - filename: assets/redCap/scene.gltf
   checksum: de31083617dc77b13f4bec327303e517d22a6d74a092365d1b4d5ac22454fbb7
+- filename: assets/hats/christmasHat/scene.gltf
+  checksum: 87c299059deeecabe918b09cbf30e13c811f6f05f67b734c9874ccc505c83039

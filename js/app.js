@@ -7,7 +7,14 @@ const mindarThree = new window.MINDAR.FACE.MindARThree({
 
 const { renderer, scene, camera } = mindarThree;
 
-const light = new THREE.AmbientLight( 0x404040 );
+let accessoriesMap;
+fetch("js/accessoriesList.json")
+.then(response => {
+   return response.json();
+})
+.then(data => accessoriesMap = data);
+
+const light = new THREE.AmbientLight(0x404040);
 
 
 renderer.outputEncoding = THREE.sRGBEncoding;
@@ -21,32 +28,32 @@ const start = async () => {
 start();
 
 const remove = () => {
-    while(scene.children.length > 0){ 
-        scene.remove(scene.children[0]); 
+    while (scene.children.length > 0) {
+        scene.remove(scene.children[0]);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const list = ["clownHat"];
-    const visibles = [false];
-    const setVisible = (button, visible) => {
-        const anchor = mindarThree.addAnchor(168);
+    const list = ["clownHat", "christmasHat", "topHat", "wizardHat", "blackGlass", "partyGlass", "aviatorGlass", "pixelGlass"];
+    const visibles = [false, false, false, false, false, false, false, false];
+    const setVisible = (button, visible, item) => {
+        const anchor = mindarThree.addAnchor(accessoriesMap[item].anchorIdx);
         let character;
         const gltfLoader = new GLTFLoader();
         if (visible) {
             button.classList.add("selected");
-            gltfLoader.load("https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/face-tracking/assets/glasses2/scene.gltf", (gltf) => {
-            character = gltf.scene;   //rotation="0 -0 0" position="0 -0.2 -0.5" scale="0.008 0.008 0.008"
-            character.position.set(0, -0.2, -0.5);
-            character.rotation.set(0, -0, 0);
-            character.scale.set(0.8, 0.8, 0.8);
-            character.visible = visible;
-            anchor.group.add(character);
-            scene.add( light );
-        });
+            gltfLoader.load(accessoriesMap[item].model, (gltf) => {
+                character = gltf.scene;
+                character.position.set(accessoriesMap[item].xPos, accessoriesMap[item].yPos, accessoriesMap[item].zPos);
+                character.rotation.set(accessoriesMap[item].xRot, accessoriesMap[item].yRot, accessoriesMap[item].zRot);
+                character.scale.set(accessoriesMap[item].scale, accessoriesMap[item].scale, accessoriesMap[item].scale);
+                character.visible = visible;
+                anchor.group.add(character);
+                scene.add(light);
+            });
         } else {
             button.classList.remove("selected");
-            remove();
+            remove(item);
         }
     }
 
@@ -56,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', () => {
             visibles[index] = !visibles[index];
             let flag = visibles[index];
-            setVisible(button, flag);
+            setVisible(button, flag, item);
         });
     });
 })

@@ -42,5 +42,49 @@
         "yRot": 5,
         "zRot": -0.2,
         "scale": 4.5
+    },
+    "aviatorGlass": {
+        "anchorIdx": 168,
+        "model": "assets/glasses/aviatorGlass/scene.gltf",
+        "xPos": 0,
+        "yPos": -0.07,
+        "zPos": 0,
+        "xRot": 0,
+        "yRot": -0,
+        "zRot": 0,
+        "scale": 0.004
+    },
+    "pixelGlass": {
+        "anchorIdx": 168,
+        "model": "assets/glasses/pixelGlass/scene.gltf",
+        "xPos": -0.05,
+        "yPos": -0.05,
+        "zPos": 0,
+        "xRot": 0,
+        "yRot": -135,
+        "zRot": 0,
+        "scale": 0.6
+    },
+    "partyGlass": {
+        "anchorIdx": 168,
+        "model": "assets/glasses/partyGlass/scene.gltf",
+        "xPos": 0,
+        "yPos": -0.07,
+        "zPos": 0,
+        "xRot": 0,
+        "yRot": -0,
+        "zRot": 0,
+        "scale": 0.5
+    },
+    "blackGlass": {
+        "anchorIdx": 168,
+        "model": "assets/glasses/blackGlass/scene.gltf",
+        "xPos": 0,
+        "yPos": -0.3,
+        "zPos": 0,
+        "xRot": 0,
+        "yRot": 30,
+        "zRot": 0,
+        "scale": 0.5
     }
 }

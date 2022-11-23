@@ -9,3 +9,11 @@ fileignoreconfig:
   checksum: ffcfda5c73c7dac442fda7b49e2751898d84938298e62642421a852b63740304
 - filename: assets/hats/wizardHat/scene.gltf
   checksum: ab9ca42a668a1b528a4af5b9f0718fe9eda743892fec58bab6c6277b24ac9394
+- filename: assets/glasses/blackGlass/scene.gltf
+  checksum: 875e48de85320d782c998104cd19655acf886083684a24a42297276e15e5a560
+- filename: assets/glasses/pixelGlass/scene.gltf
+  checksum: 0ce32d72b77afcd22838e7790f2d78e0b9a4369120a3ee9936e1b05153b0b643
+- filename: assets/glasses/partyGlass/scene.gltf
+  checksum: f85975ae405fa8a30b6e86107c75651af97f4d906851eb1c5ee7575fbec3980f
+- filename: assets/glasses/aviatorGlass/scene.gltf
+  checksum: 5669c8af6f87d4064cb199bdf5ba277e9cf5b69b1c68433da542b259c5c7d143

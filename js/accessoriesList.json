@@ -20,5 +20,27 @@
         "yRot": 5,
         "zRot": -0.2,
         "scale": 10
+    },
+    "wizardHat": {
+        "anchorIdx": 10,
+        "model": "assets/hats/wizardHat/scene.gltf",
+        "xPos": 0,
+        "yPos": -0.1,
+        "zPos": -0.2,
+        "xRot": -6.4,
+        "yRot": 5,
+        "zRot": -0.2,
+        "scale": 0.35
+    },
+    "topHat": {
+        "anchorIdx": 10,
+        "model": "assets/hats/topHat/scene.gltf",
+        "xPos": 0,
+        "yPos": 0.4,
+        "zPos": -0.2,
+        "xRot": -6.4,
+        "yRot": 5,
+        "zRot": -0.2,
+        "scale": 4.5
     }
 }

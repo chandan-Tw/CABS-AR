@@ -5,3 +5,7 @@ fileignoreconfig:
   checksum: de31083617dc77b13f4bec327303e517d22a6d74a092365d1b4d5ac22454fbb7
 - filename: assets/hats/christmasHat/scene.gltf
   checksum: 87c299059deeecabe918b09cbf30e13c811f6f05f67b734c9874ccc505c83039
+- filename: assets/hats/topHat/scene.gltf
+  checksum: ffcfda5c73c7dac442fda7b49e2751898d84938298e62642421a852b63740304
+- filename: assets/hats/wizardHat/scene.gltf
+  checksum: ab9ca42a668a1b528a4af5b9f0718fe9eda743892fec58bab6c6277b24ac9394

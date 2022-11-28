@@ -9,10 +9,10 @@ const { renderer, scene, camera } = mindarThree;
 
 let accessoriesMap;
 fetch("js/accessoriesList.json")
-.then(response => {
-   return response.json();
-})
-.then(data => accessoriesMap = data);
+    .then(response => {
+        return response.json();
+    })
+    .then(data => accessoriesMap = data);
 
 const light = new THREE.AmbientLight(0x404040);
 
@@ -27,10 +27,10 @@ const start = async () => {
 
 start();
 
-const remove = () => {
-    while (scene.children.length > 0) {
-        scene.remove(scene.children[0]);
-    }
+const remove = (item, anchor) => {
+    const selectedObj = scene.getObjectByName(item);
+    selectedObj.visible = false;
+    anchor.group.add(selectedObj);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -48,12 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 character.rotation.set(accessoriesMap[item].xRot, accessoriesMap[item].yRot, accessoriesMap[item].zRot);
                 character.scale.set(accessoriesMap[item].scale, accessoriesMap[item].scale, accessoriesMap[item].scale);
                 character.visible = visible;
+                character.name = item;
                 anchor.group.add(character);
                 scene.add(light);
             });
         } else {
             button.classList.remove("selected");
-            remove(item);
+            remove(item, anchor);
         }
     }
 
